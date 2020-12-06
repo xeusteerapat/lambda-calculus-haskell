@@ -1,5 +1,5 @@
-prime_num :: Int -> [Int]
-prime_num n = sieve [2 .. n]
+prime_to :: Int -> [Int]
+prime_to n = sieve [2 .. n]
   where
     sieve [] = []
-    sieve (x : xs) = x : sieve [y | y <- xs, [y rem x] /= 0]
+    sieve (x : xs) = x : sieve [y | y <- xs, [y `rem` x] /= 0]
